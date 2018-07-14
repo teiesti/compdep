@@ -42,7 +42,7 @@
     $A:v_A \rightarrow B:v_B$ denotes a (public) dependency. It means, that crate $A$ in version $v_A$ depends on crate $B$ in version $v_B$. Public means, that $A:v_A$ re-exports at least some of the features provided by $B:v_B$. (To make things easier, we won't deal with private dependencies for now.)
 
     \section{Semantic versioning}
-    A \emph{semantic version} as described in \cite{TODO} is a 3-tuple \texttt{major.minor.patch} that make up a version. Semantic versioning provides some compatibility guaranties:
+    A \emph{semantic version} as described in \cite{semver} is a 3-tuple \texttt{major.minor.patch} that make up a version. Semantic versioning provides some compatibility guaranties:
 
     Let $A$ be a crate with two semantic versions $v_A$ and $v'_A$ with $v_A \geq v'_A$.
 
@@ -120,5 +120,8 @@
         \item This does not hold for (private) dependencies that do not contribute to the API of a crate. Therefore, I suggest to add a destinction between public and private dependencies to \texttt{cargo}.
         \item I have ideas in the pipe that may justify updating public dependencies without changing the major version. These ideas advertise the addition of meta-versions like \texttt{stable} that translate to a specific version at some time $t'$ while simultaneously announces that it might translate to a greater version at some time $t$ with $t' < t$. I believe, these ideas provide a elegant solution to most of the use cases of LTS versions and thus being a strong alternative. I hope, I will be able to write them down soon.
     \end{enumerate}
+
+    \bibliographystyle{plaindin}
+    \bibliography{references}
 
 \end{document}
