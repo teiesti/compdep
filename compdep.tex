@@ -27,9 +27,9 @@
 
     \subsection{Compatibility}
     A versioned crate $A:v_A$ is \emph{compatible} with another crate $B:v_B$, iff
-    \begin{equation}
+    $$
     A:v_A \supseteq B:v_B
-    \end{equation}
+    $$
     That means, every feature provided by $B:v_B$ is also provided by $A:v_A$.
 
     A versioned crate $A:v_A$ is called \emph{backward-compatible} with $B:v_B$, iff $A:v_A$ is compatible with $B:v_B$ and $v_A \geq v_B$.
@@ -80,7 +80,8 @@
     Since $B:v'_B$ is backward-compatible with itself and any version $v_B$ with $v_B \le \langle major(v'_B+1),0,0 \rangle$ is backward-compatible with $B:v'_B$, we may write
     $$
     A:v_A \rightarrow B:[v'_B, \langle major(v'_B+1),0,0 \rangle)
-    $$ instead of both requirements above. The notation means that $A:v_A$ must depend on $B$ in any version between $v'_B$ (inclusive) and $\langle major(v'_B+1),0,0 \rangle$ (exclusive). The crate author may decide which version is appropriate.
+    $$
+    instead of both requirements above. The notation means that $A:v_A$ must depend on $B$ in any version between $v'_B$ (inclusive) and $\langle major(v'_B+1),0,0 \rangle$ (exclusive). The crate author may decide which version is appropriate.
 
     \section{The crux with minimal versions}
     Let's take the example from section \ref{sec:Compatibility_with_dependency_in_case_of_semantic_versions} even further.
